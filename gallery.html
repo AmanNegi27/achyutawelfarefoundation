@@ -12,32 +12,45 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="http://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css">
     <style>
-        /* Style for Gallery Images */
-        .team-image img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 8px;
-            display: block;
-            margin: 0 auto;
-            filter: grayscale(100%);
-            transition: all 0.5s ease; /* Smooth hover effect */
-        }
+      /* Style for Gallery Images */
+      .team {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 15px; /* Space between images */
+          padding: 15px; /* Padding around the gallery */
+      }
 
-        /* Hover Effect */
-        .team-image img:hover {
-            filter: none; /* Remove grayscale to show original color */
-            transform: scale(1.05); /* Optional: slight zoom effect on hover */
-        }
-        ul li a {
-                color: white; /* Sets the text color to white */
-                text-decoration: none; /* Removes the underline */
-            }
+      .team-image img {
+          width: 100%; /* Make images responsive */
+          height: auto; /* Maintain aspect ratio */
+          object-fit: cover; /* Ensure images fit within the container */
+          border-radius: 8px; /* Optional: rounded corners */
+          filter: grayscale(100%);
+          transition: all 0.3s ease; /* Smooth hover effect */
+      }
 
-            ul li a:hover {
-                text-decoration: underline; /* Adds underline on hover for better UX */
-            }
-    </style>
+      /* Hover Effect */
+      .team-image img:hover {
+          filter: none; /* Remove grayscale on hover */
+          transform: scale(1.05); /* Slight zoom effect on hover */
+      }
+
+      @media (max-width: 600px) {
+          .team {
+              grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+          }
+      }
+
+      ul li a {
+          color: white; /* Set text color to white */
+          text-decoration: none; /* Remove underline */
+      }
+
+      ul li a:hover {
+          text-decoration: underline; /* Add underline on hover */
+      }
+      
+  </style>
 </head>
 <body>
     <div class="header container">
@@ -86,7 +99,7 @@
                     <div class="member-inner">
                         <!-- Team Member Image -->
                         <a class="team-image">
-                            <img src="img/Photos/pic1.jpg" alt="Gallery Image 1" />
+                            <img src="img/Photos/pic1.jpg" alt="" />
                         </a>
                     </div>
                 </div>
@@ -99,7 +112,7 @@
                               <div class="member-inner">
                                   <!-- Team Member Image -->
                                   <a class="team-image">
-                                      <img src="img/Photos/Pic2.jpg" alt="Gallery Image 1" />
+                                      <img src="img/Photos/Pic2.jpg" alt="" />
                                   </a>
                               </div>
                           </div>
