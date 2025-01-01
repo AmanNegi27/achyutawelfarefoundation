@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Achyuta Welfare Foundation</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/demo.css" />
+    <link rel="stylesheet" href="css/testimonial.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    
+    <style>
+        .ngo-heading {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            color: orange;
+            margin-top: 20px;
+        }
+        .Slogan {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: rgb(0, 255, 51);
+            margin-top: 20px;
+        }
+        .ngo-logo {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+        .ngo-description {
+            text-align: center;
+            font-size: 1.2em;
+            color: #555;
+            margin-top: 20px;
+        }
+        .ngo-contact {
+            text-align: center;
+            font-size: 1.2em;
+            color: #555;
+            margin-top: 20px;
+        }
+        .ngo-contact a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .ngo-contact a:hover {
+            text-decoration: underline;
+        }
+        .navbar {
+            margin-top: 15px;
+        }
+
+        ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        ul li a:hover {
+            text-decoration: underline;
+        }
+        /* FAQ Section */
+        .faq-container {
+            margin: 30px auto;
+            max-width: 800px;
+        }
+        .faq-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            background-color: white;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .faq-question {
+            padding: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background-color: #f7f7f7;
+            transition: background-color 0.3s;
+        }
+        .faq-question:hover {
+            background-color: #e9ecef;
+        }
+        .faq-answer {
+            padding: 15px;
+            font-size: 1em;
+            color: #555;
+            display: none;
+            border-top: 1px solid #ddd;
+        }
+        .faq-question .toggle-icon {
+            font-size: 1.5em;
+            color: #007bff;
+        }
+        .faq-question .toggle-icon.expanded {
+            transform: rotate(45deg);
+        }
+
+                /* Mobile Styles */
+@media (max-width: 767px) {
+    /* Resize logo for mobile */
+    .visible-xs img {
+        width: 150px; /* Reduce the logo size for mobile */
+        height: auto;
+    }
+
+    /* Navbar adjustments for mobile */
+    .navbar {
+        text-align: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 5px;
+        width: auto; /* Make sure navbar takes only the necessary width */
+        z-index: 10; /* Ensure navbar is on top of content */
+    }
+
+    .navbar-header {
+        position: absolute;
+        right: 0;
+        top: 16px;
+    }
+
+    /* Prevent overlap between navbar items and page content */
+    body {
+        margin-top: 80px; /* Push page content down to avoid overlap */
+    }
+
+    .navbar .nav {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        margin-top: 50px; /* Add spacing below the toggle button */
+    }
+
+    .navbar .nav > li {
+        margin-top: 0px; /* Add spacing between navbar items */
+        padding: 0px 0; /* Add padding for easier clicking */
+    }
+
+    .navbar .nav > li.selected {
+        margin-top: 0; /* Reset margin */
+        padding: 0;    /* Reset padding */
+        font-weight: bold; /* Optional: Highlight the selected item */
+       
+    }
+
+    /* Ensure contact or other page items are clickable */
+    .navbar-collapse {
+        background-color: lightblue; /* Make the navbar background transparent */
+        padding: 10px 15px; /* Retain padding to prevent overlapping of items */
+        box-shadow: none; /* Remove any shadow for a cleaner transparent look */
+}
+
+    /* Hide logo and button on small screen */
+    .hidden-xs.hidden-sm {
+        display: none;
+    }
+}
+
+    /* Desktop Styles (Laptop/Tablet) */
+    @media (min-width: 768px) {
+       
+        .hidden-xs.hidden-sm {
+            display: block;
+        }
+        .visible-xs img {
+            width: 200px; 
+            height: auto;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Heading -->
+    <div class="ngo-heading">Achyuta Welfare Foundation</div>
+    <div class="Slogan">Making a Difference Together</div>
+
+    <div class="header container">
+        <div class="visible-xs visible-sm col-xs-12 col-sm-12 text-center sm-logo">
+            <a rel="home" href="index.html">
+                <img src="img/AWF.png" width="200" alt="logo">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li class="hidden-xs hidden-sm">
+                    <a rel="home" href="index.html">
+                        <img class="logo" src="img/AWF.png" width="200" alt="logo" 
+                             style="border-radius: 50%; border: 5px solid #4CAF50;">
+                    </a>
+                </li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="selected"><a href="faq.html">FAQ's</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="faq-container">
+    <h2 class="text-center">Frequently Asked Questions</h2>
+
+      <!-- FAQ Item 1 -->
+      <div class="faq-item">
+          <div class="faq-question">
+              <span>What is Achyuta Welfare Foundation?</span>
+              <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+              Achyuta Welfare Foundation is a non-profit organization dedicated to improving the lives of underprivileged communities through various initiatives, including education, health, and social welfare programs.
+          </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="faq-item">
+          <div class="faq-question">
+              <span>How can I donate to your foundation?</span>
+              <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+              You can donate to our foundation by visiting our "Donate" page. We accept various modes of donations, including online payments, bank transfers, and in-kind contributions.
+          </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="faq-item">
+          <div class="faq-question">
+              <span>Are donations to Achyuta Welfare Foundation tax-deductible?</span>
+              <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+              Yes, donations made to Achyuta Welfare Foundation are eligible for tax deductions under Section 80G of the Income Tax Act.
+          </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="faq-item">
+          <div class="faq-question">
+              <span>How can I volunteer for your initiatives?</span>
+              <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+              You can sign up as a volunteer by filling out the volunteer form on our "Team" page. We welcome individuals who share our vision and want to contribute to making a difference.
+          </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="faq-item">
+          <div class="faq-question">
+              <span>Where are your services currently available?</span>
+              <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+              Our services are currently available in Dehradun, Bhopal, and other selected cities across India. We aim to expand our reach in the near future.
+          </div>
+      </div>
+  </div>
+
+<footer id="footer"> 
+        <div class="footer-content container">
+            <div class="footer-adress text-center col-xs-12 col-sm-4 col-md-4">
+                <h4>Making a Difference Together</h4>
+                <ul class="footer-menus">
+                  <ul>
+                      <li><a href="index.html">Home</a> /</li>
+                      <li><a href="about.html">About</a></li><br />
+                      <li><a href="service.html">Service</a> /</li>
+                      <li><a href="gallery.html">Gallery</a> /</li>
+                      <li><a href="contact.html">Contact</a></li>
+                  </ul>
+              </ul>
+            </div>
+            <div class="footer-second col-xs-12 col-sm-4 col-md-4">
+              <div class="social-block text-center">
+                <div class="social-share">
+                  <i class="fa fa-2x fa-facebook"></i>
+                  <i class="fa fa-2x  fa-twitter"></i>
+                  <a href="https://www.linkedin.com/company/achyuta-welfare-foundation/" target="_blank" style="text-decoration: none;">
+                    <i class="fa fa-2x fa-linkedin" style="margin-left: 10px;"></i>
+                </a>
+                  <a href="https://www.instagram.com/achyutawelfarefoundation" target="_blank" style="color: #E4405F; text-decoration: none; font-size: 2em;">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                </div>
+              </div>
+              <p class="text-center footer-text1">+91-9675859126</p>
+                <p class="text-center footer-text"> achyutawelfarefoundation@gmail.com </p></div>
+            <div class="footer-third col-xs-12 col-sm-4 col-md-4">
+              <div class="copyright">
+                  <span>Copyright 2025 Achyuta Welfare Foundation</span><br>
+                  <span>All Rights Reserved</span>
+              </div>
+            </div>
+        </div>
+        <div class="move-top-page">
+      </div>
+    </footer>
+
+  <!-- script references -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        // Toggle FAQ Answer Visibility
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('.toggle-icon');
+
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.textContent = '+';
+                } else {
+                    answer.style.display = 'block';
+                    icon.textContent = '×';
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+    </script>
+  </body>
+</html>
