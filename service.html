@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
-        <title>Achyuta Welfare Foundation</title>
-        <meta name="generator" content="Bootply" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!--[if lt IE 9]>
-            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <link href="css/styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/demo.css" />
-        <link rel="stylesheet" href="css/testimonial.css" />
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
-        <div class="header container">
-            <div class="visible-xs visible-sm col-xs-12 col-sm-12 text-center sm-logo">
-                <a rel="home" href="index.html">
-                    <img src="img/AWF.png" width="200" alt="logo">
-                </a>
-            </div>
-        </div>
-        <div class="navbar" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li class="selected"><a href="service.html">Services</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li class="hidden-xs hidden-sm">
-                        <a rel="home" href="index.html"><img class="logo" src="img/AWF.png" width="200" alt="logo"></a>
-                    </li>
-                    <li><a href="event.html">Events</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="donate.html">Donate</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Achyuta Welfare Foundation</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/demo.css" />
+    <link rel="stylesheet" href="css/testimonial.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    
     <style>
-      .slideshow {
+        .ngo-heading {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            color: orange;
+            margin-top: 20px;
+        }
+        .Slogan {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: rgb(0, 255, 51);
+            margin-top: 20px;
+        }
+        .ngo-logo {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+        .ngo-description {
+            text-align: center;
+            font-size: 1.2em;
+            color: #555;
+            margin-top: 20px;
+        }
+        .ngo-contact {
+            text-align: center;
+            font-size: 1.2em;
+            color: #555;
+            margin-top: 20px;
+        }
+        .ngo-contact a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .ngo-contact a:hover {
+            text-decoration: underline;
+        }
+        .navbar {
+            margin-top: 15px;
+        }
+
+        .slideshow {
           position: relative;
           width: 100%;
           height: 300px; /* Reduced height */
@@ -87,10 +95,128 @@
             ul li a:hover {
                 text-decoration: underline; /* Adds underline on hover for better UX */
             }
-  </style>
-  
+
+               /* Mobile Styles */
+@media (max-width: 767px) {
+    /* Resize logo for mobile */
+    .visible-xs img {
+        width: 150px; /* Reduce the logo size for mobile */
+        height: auto;
+    }
+
+    /* Navbar adjustments for mobile */
+    .navbar {
+        text-align: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 5px;
+        width: auto; /* Make sure navbar takes only the necessary width */
+        z-index: 10; /* Ensure navbar is on top of content */
+    }
+
+    .navbar-header {
+        position: absolute;
+        right: 0;
+        top: 16px;
+    }
+
+    /* Prevent overlap between navbar items and page content */
+    body {
+        margin-top: 80px; /* Push page content down to avoid overlap */
+    }
+
+    .navbar .nav {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        margin-top: 50px; /* Add spacing below the toggle button */
+    }
+
+    .navbar .nav > li {
+        margin-top: 5px; /* Add spacing between navbar items */
+        padding: 0px 0; /* Add padding for easier clicking */
+    }
+
+    .navbar .nav > li.selected {
+        margin-top: 0; /* Reset margin */
+        padding: 0;    /* Reset padding */
+        font-weight: bold; /* Optional: Highlight the selected item */
+        
+    }
+
+    /* Ensure contact or other page items are clickable */
+    .navbar-collapse {
+        background-color:lightblue; /* Make the navbar background transparent */
+        padding: 10px 15px; /* Retain padding to prevent overlapping of items */
+        box-shadow: none; /* Remove any shadow for a cleaner transparent look */
+}
+
+    /* Hide logo and button on small screen */
+    .hidden-xs.hidden-sm {
+        display: none;
+    }
+}
+
+    /* Desktop Styles (Laptop/Tablet) */
+    @media (min-width: 768px) {
+        /* Ensure the logo stays the same on desktop */
+        .hidden-xs.hidden-sm {
+            display: block;
+        }
+
+        /* Keep the logo size for desktop */
+        .visible-xs img {
+            width: 200px; /* Maintain the original logo size for desktop */
+            height: auto;
+        }
+    }
+    </style>
 </head>
+
 <body>
+    <!-- Heading -->
+    <div class="ngo-heading">Achyuta Welfare Foundation</div>
+    <div class="Slogan">Making a Difference Together</div>
+
+    <div class="header container">
+        <div class="visible-xs visible-sm col-xs-12 col-sm-12 text-center sm-logo">
+            <a rel="home" href="index.html">
+                <img src="img/AWF.png" width="200" alt="logo">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="selected"><a href="service.html">Services</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li class="hidden-xs hidden-sm">
+                    <a rel="home" href="index.html">
+                        <img class="logo" src="img/AWF.png" width="200" alt="logo" 
+                             style="border-radius: 50%; border: 5px solid #4CAF50;">
+                    </a>
+                </li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ'S</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
 <div class="container">
     <header class="text-center">
         <h1>Our Services</h1>
@@ -192,6 +318,7 @@
         </div>
 
     </div>
+
     <footer id="footer"> 
         <div class="footer-content container">
             <div class="footer-adress text-center col-xs-12 col-sm-4 col-md-4">
@@ -212,14 +339,16 @@
                     <div class="social-share">
                         <i class="fa fa-2x fa-facebook"></i>
                         <i class="fa fa-2x  fa-twitter"></i>
-                        <i class="fa fa-2x  fa-google-plus"></i>
+                        <a href="https://www.linkedin.com/company/achyuta-welfare-foundation/" target="_blank" style="text-decoration: none;">
+                            <i class="fa fa-2x fa-linkedin" style="margin-left: 10px;"></i>
+                        </a>
                         <a href="https://www.instagram.com/achyutawelfarefoundation" target="_blank" style="color: #E4405F; text-decoration: none; font-size: 2em;">
                             <i class="fa fa-instagram"></i>
                         </a>
                     </div>
                 </div>
-                <p class="text-center footer-text1">123 456 7890</p>
-                <p class="text-center footer-text">humanity@shuvohabib.com</p>
+                <p class="text-center footer-text1">+91-9675859126</p>
+                <p class="text-center footer-text"> achyutawelfarefoundation@gmail.com </p></div>
             </div>
             <div class="footer-third col-xs-12 col-sm-4 col-md-4">
                 <div class="copyright">
@@ -248,10 +377,8 @@
             autoControls: true
         });
     </script>
-</body>
-</html>
 
-</div>
+
 
 <!-- script references -->
 <script src="js/jquery.min.js"></script>
@@ -276,8 +403,7 @@
     setupSlideshow('slideshow3');
     setupSlideshow('slideshow4');
     setupSlideshow('slideshow5');
-    setupSlideshow('slideshow6');
-    
-</script>
-</body>
-</html>
+    setupSlideshow('slideshow6');   
+    </script>
+    </body>
+    </html>
