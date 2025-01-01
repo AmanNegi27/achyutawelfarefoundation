@@ -122,19 +122,19 @@
             .join-us-btn {
                 margin-top: 20px;
                 display: block;
-                width: 100%; /* Ensure the button stretches across the full width */
+                width: 100%; 
                 text-align: center;
             }
             /* Move Join Us Button Below Logo */
             .visible-xs.visible-sm.col-xs-12.col-sm-12.text-center.sm-logo {
                 display: block;
-                margin-bottom: 20px; /* Add space between logo and button */
+                margin-bottom: 20px; 
             }
             
 
             /* Resize logo for mobile */
             .visible-xs img {
-                width: 150px; /* Reduce the logo size for mobile */
+                width: 150px; 
                 height: auto;
             }
 /* Navbar adjustments for mobile */
@@ -144,12 +144,12 @@
                 top: 0;
                 right: 0;
                 margin-top: 5px;
-                width: auto; /* Make sure navbar takes only the necessary width */
+                width: auto; 
             }
             .navbar-collapse {
-                background-color: lightblue; /* Make the navbar background transparent */
-                padding: 10px 15px; /* Retain padding to prevent overlapping of items */
-                box-shadow: none; /* Remove any shadow for a cleaner transparent look */
+                background-color: lightblue; 
+                padding: 10px 15px; 
+                box-shadow: none; 
             }
 
             .navbar-header {
@@ -174,17 +174,41 @@
 
         /* Desktop Styles (Laptop/Tablet) */
         @media (min-width: 768px) {
-            /* Ensure the logo and Join Us button stay the same on desktop */
+            
             .hidden-xs.hidden-sm {
                 display: block;
             }
 
             /* Keep the logo size for desktop */
             .visible-xs img {
-                width: 200px; /* Maintain the original logo size for desktop */
+                width: 200px; 
                 height: auto;
             }
         }
+        /* Video Banner Container */
+    .video-banner-container {
+        width: 100%; 
+        overflow: hidden; 
+        margin: 20px 0; 
+    }
+
+        /* Video Banner */
+        .video-banner {
+            width: 100%; 
+            height: auto; 
+            max-height: 280px; 
+            display: block; 
+            object-fit: cover; 
+            cursor: pointer; 
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .video-banner {
+                max-height: 100px; 
+            }
+        }
+
     </style>
 </head>
 
@@ -287,6 +311,7 @@
             </div>
         </div>
 
+
         <!-- Blog Section -->
         <div class="container header-start text-center">
             <div class="heading-icon">
@@ -295,6 +320,15 @@
             <h1 class="main-text">Show your Love for the Achyuta</h1>
             <p class="text-center sub-text"><em class="first-line">Achyuta Welfare Foundation is a section 8 registered non profit organization emerging foundation which goals for a betterment of society.
                 </em>It aims to the betterment of the society in multiple domains like Healthcare , Education , Women Empowerment , Animal Welfare , Micro and Small Businesses and other in our NGO we also aim for the sustainable future. </em></p>
+        </div>
+        
+        <div class="video-banner-container">
+            <a href="donate.html" target="_self">
+                <video class="video-banner" autoplay loop muted>
+                    <source src="img/donate.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </a>
         </div>
         <div class="divider col-sm-12 col-xs-12 col-md-12">
             <div class="header-text"><span>Blog</span> News</div>
@@ -381,7 +415,7 @@
                             <li><a href="index.html">Home</a> /</li>
                             <li><a href="about.html">About</a></li><br />
                             <li><a href="service.html">Service</a> /</li>
-                            <li><a href="gallery.html">Gallery</a> /</li>
+                            <li><a href="faq.html">FAQ's</a> /</li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
                         
