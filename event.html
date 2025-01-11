@@ -126,7 +126,7 @@
 
         /* Footer Styles */
         footer {
-            background-color: #343a40;
+            background-color: #0d4b62;
             color: #ffffff;
             padding: 20px 0;
             text-align: center;
@@ -158,7 +158,7 @@
         text-align: right;
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
         margin-top: 5px;
         width: auto; /* Make sure navbar takes only the necessary width */
         z-index: 10; /* Ensure navbar is on top of content */
@@ -166,7 +166,7 @@
 
     .navbar-header {
         position: absolute;
-        right: 0;
+        left: 0;
         top: 16px;
     }
 
@@ -219,6 +219,64 @@
             height: auto;
         }
     }
+    /* Image container */
+/* Slideshow container styling */
+.event-slideshow-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Hide all images by default */
+.event-slide {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Show the active image */
+.event-slide.active {
+    display: block;
+}
+
+/* Navigation button styles */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+/* Positioning */
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Hover effect */
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .prev-btn, .next-btn {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
     </style>
 </head>
 
@@ -274,131 +332,193 @@
     <div id="events">
         <!-- Event 1 -->
         <div class="event-layout">
-            <h2>Drawing Competetion,  Kala Gaon, Dehradun</h2>
+            <h2>Drawing Competition, Kala Gaon, Dehradun</h2>
             <div class="event-slideshow-container" data-auto-slide>
-                <img src="img/Photos/Edu1.jpg" alt="Event 1 Slide 1" class="active">
-                <img src="img/Photos/Edu2.jpg" alt="Event 1 Slide 2">
-                <img src="img/Photos/Edu3.jpg" alt="Event 1 Slide 3">
+                <img src="img/Photos/Edu1.jpg" alt="Event 1 Slide 1" class="event-slide active">
+                <img src="img/Photos/Edu2.jpg" alt="Event 1 Slide 2" class="event-slide">
+                <img src="img/Photos/Edu3.jpg" alt="Event 1 Slide 3" class="event-slide">
+    
+                <!-- Navigation Buttons -->
+                <button class="prev-btn" onclick="changeSlide(-1, 0)">❮</button>
+                <button class="next-btn" onclick="changeSlide(1, 0)">❯</button>
             </div>
             <div class="event-description">
                 <p>The drawing competition showcased incredible talent from participants of all ages. Artists explored themes like Nature's Symphony and Futuristic City, producing stunning and imaginative works. A panel of judges awarded top entries, celebrating creativity and skill. The event fostered community engagement and inspired a love for art among attendees.</p>
             </div>
         </div>
+    </div>
+    
+        
 
         <!-- Event 2 -->
-        <div class="event-layout">
-            <h2>Pad Distribution Drive</h2>
-            <div class="event-slideshow-container" data-auto-slide>
-                <img src="img/Photos/Pad1.jpg" alt="Event 2 Slide 1" class="active">
-                <img src="img/Photos/Pad2.jpg" alt="Event 2 Slide 2">
-                <img src="img/Photos/Pad3.jpg" alt="Event 2 Slide 3">
+        <div id="events">
+            <!-- Event 2 -->
+            <div class="event-layout">
+                <h2>Pad Distribution Drive</h2>
+                <div class="event-slideshow-container" data-auto-slide>
+                    <img src="img/Photos/Pad1.jpg" alt="Event 2 Slide 1" class="event-slide active">
+                    <img src="img/Photos/Pad2.jpg" alt="Event 2 Slide 2" class="event-slide">
+                    <img src="img/Photos/Pad3.jpg" alt="Event 2 Slide 3" class="event-slide">
+                
+                    <!-- Navigation Buttons -->
+                    <button class="prev-btn" onclick="changeSlide(-1, 1)">❮</button>
+                    <button class="next-btn" onclick="changeSlide(1, 1)">❯</button>
+                </div>
+                <div class="event-description">
+                    <p>
+                        We are thrilled to report that our recent Pad Donation Drive was a great success! Thanks to the incredible generosity of our community, we collected a substantial number of hygiene products for those in need. Participants engaged in informative sessions about menstrual health and well-being. Together, we are making a positive impact and promoting dignity for all. Thank you to everyone who contributed! Stay tuned for our next initiative!
+                    </p>
+                </div>
             </div>
-            <div class="event-description">
-                <p>
-                    We are thrilled to report that our recent Pad Donation Drive was a great success! Thanks to the incredible generosity of our community, we collected a substantial number of hygiene products for those in need. Participants engaged in informative sessions about menstrual health and well-being. Together, we are making a positive impact and promoting dignity for all. Thank you to everyone who contributed! Stay tuned for our next initiative!</p>
+        </div>
+        
+
+        <div id="events">
+            <!-- Event 3 -->
+            <div class="event-layout">
+                <h2>Pad distribution drive -2 , Bindal Bridge</h2>
+                <div class="event-slideshow-container" data-auto-slide>
+                    <img src="img/Photos/pic1.jpg" alt="Event 3 Slide 1" class="event-slide active">
+                    <img src="img/Photos/Clo1.jpg" alt="Event 3 Slide 2" class="event-slide">
+                    <img src="img/Photos/Clo2.jpg" alt="Event 3 Slide 3" class="event-slide">
+                
+                    <!-- Navigation Buttons -->
+                    <button class="prev-btn" onclick="changeSlide(-1, 2)">❮</button>
+                    <button class="next-btn" onclick="changeSlide(1, 2)">❯</button>
+                </div>
+                <div class="event-description">
+                    <p>
+                        We are thrilled to report that our recent Pad Donation Drive was a great success! Thanks to the incredible generosity of our community, we collected a substantial number of hygiene products for those in need. Participants engaged in informative sessions about menstrual health and well-being. Together, we are making a positive impact and promoting dignity for all. Thank you to everyone who contributed! Stay tuned for our next initiative!
+                    </p>
+                </div>
             </div>
         </div>
+        
 
-        <div class="event-layout">
-          <h2> Pad distribution drive -2 , Bindal Bridge</h2>
-          <div class="event-slideshow-container" data-auto-slide>
-              <img src="img/Photos/pic1.jpg" alt="Event 2 Slide 1" class="active">
-              <img src="img/Photos/Clo1.jpg" alt="Event 2 Slide 2">
-              <img src="img/Photos/Clo2.jpg" alt="Event 2 Slide 3">
-          </div>
-          <div class="event-description">
-              <p>
-                We are thrilled to report that our recent Pad Donation Drive was a great success! Thanks to the incredible generosity of our community, we collected a substantial number of hygiene products for those in need. Participants engaged in informative sessions about menstrual health and well-being. Together, we are making a positive impact and promoting dignity for all. Thank you to everyone who contributed! Stay tuned for our next initiative!.</p>
-          </div>
-      </div>
-
-      <div class="event-layout">
-        <h2> Cloth Distribution drive Collab with Siddhartha Institute,   Bindal Bridge UK</h2>
-        <div class="event-slideshow-container" data-auto-slide>
-            <img src="img/Photos/C1.jpg" alt="Event 2 Slide 1" class="active">
-            <img src="img/Photos/C2.jpg" alt="Event 2 Slide 2">
-            <img src="img/Photos/C3.jpg" alt="Event 2 Slide 3">
-            <img src="img/Photos/C3.jpg" alt="Event 2 Slide 4">
+        <div id="events">
+            <!-- Event 4 -->
+            <div class="event-layout">
+                <h2>Cloth Distribution drive Collab with Siddhartha Institute, Bindal Bridge UK</h2>
+                <div class="event-slideshow-container" data-auto-slide>
+                    <img src="img/Photos/C1.jpg" alt="Event 4 Slide 1" class="event-slide active">
+                    <img src="img/Photos/C2.jpg" alt="Event 4 Slide 2" class="event-slide">
+                    <img src="img/Photos/C3.jpg" alt="Event 4 Slide 3" class="event-slide">
+                    <img src="img/Photos/C4.jpg" alt="Event 4 Slide 4" class="event-slide">
+                
+                    <!-- Navigation Buttons -->
+                    <button class="prev-btn" onclick="changeSlide(-1, 3)">❮</button>
+                    <button class="next-btn" onclick="changeSlide(1, 3)">❯</button>
+                </div>
+                <div class="event-description">
+                    <p>
+                        We’re excited to share that our Cloth Donation Drive was a resounding success! Thanks to the generous contributions from our community, we collected a wide range of clothing for those in need. Volunteers worked tirelessly to sort and distribute items, ensuring they reached the right hands. Your support makes a real difference—thank you for helping us spread warmth and kindness! Stay tuned for our next drive!
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="event-description">
-            <p>We’re excited to share that our Cloth Donation Drive was a resounding success! Thanks to the generous contributions from our community, we collected a wide range of clothing for those in need. Volunteers worked tirelessly to sort and distribute items, ensuring they reached the right hands. Your support makes a real difference—thank you for helping us spread warmth and kindness! Stay tuned for our next drive!</p>
+        
+
+        <div id="events">
+            <!-- Event 5 -->
+            <div class="event-layout">
+                <h2>Career Guidance Counselling, CM Rise School Bhopal</h2>
+                <div class="event-slideshow-container" data-auto-slide>
+                    <img src="img/Photos/B1.jpg" alt="Event 5 Slide 1" class="event-slide active">
+                    <img src="img/Photos/B2.jpg" alt="Event 5 Slide 2" class="event-slide">
+                    <img src="img/Photos/B3.jpg" alt="Event 5 Slide 3" class="event-slide">
+                
+                    <!-- Navigation Buttons -->
+                    <button class="prev-btn" onclick="changeSlide(-1, 4)">❮</button>
+                    <button class="next-btn" onclick="changeSlide(1, 4)">❯</button>
+                </div>
+                <div class="event-description">
+                    <p>
+                        Our recent Career Guidance Session was a fantastic success! Attendees explored various career paths through informative presentations and interactive workshops. Local professionals shared valuable insights, helping participants gain clarity on their future goals. We appreciate everyone who joined us and contributed to this enriching experience. Stay tuned for more opportunities to guide your career journey!
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
+        
 
-    <div class="event-layout">
-      <h2>Career Guidance Councelling , CM Rise School Bhopal</h2>
-      <div class="event-slideshow-container" data-auto-slide>
-          <img src="img/Photos/B1.jpg" alt="Event 2 Slide 1" class="active">
-          <img src="img/Photos/B2.jpg" alt="Event 2 Slide 2">
-          <img src="img/Photos/B3.jpg" alt="Event 2 Slide 3">
-      </div>
-      <div class="event-description">
-          <p>Our recent Career Guidance Session was a fantastic success! Attendees explored various career paths through informative presentations and interactive workshops. Local professionals shared valuable insights, helping participants gain clarity on their future goals. We appreciate everyone who joined us and contributed to this enriching experience. Stay tuned for more opportunities to guide your career journey!</p>
-      </div>
-    </div>
+        <div id="events">
+            <!-- Event 6 -->
+            <div class="event-layout">
+                <h2>Cloth Distribution drive -1, Bhopal</h2>
+                <div class="event-slideshow-container" data-auto-slide>
+                    <img src="img/Photos/CD1.jpg" alt="Event 6 Slide 1" class="event-slide active">
+                    <img src="img/Photos/CD2.jpg" alt="Event 6 Slide 2" class="event-slide">
+                    <img src="img/Photos/CD3.jpg" alt="Event 6 Slide 3" class="event-slide">
+                
+                    <!-- Navigation Buttons -->
+                    <button class="prev-btn" onclick="changeSlide(-1, 5)">❮</button>
+                    <button class="next-btn" onclick="changeSlide(1, 5)">❯</button>
+                </div>
+                <div class="event-description">
+                    <p>
+                        WARMTH OF KINDNESS SPREADS IN BHOPAL
+        
+                        Bhopal, Dec 1, 2024: On a chilly winter morning, Team Bhopal of Achyuta Welfare Foundation brought warmth and smiles to the underprivileged at Chetak Bridge.
+                        
+                        The foundation's cloth distribution drive was a beacon of hope, reminding us that small gestures can make a big difference. Beneficiaries' eyes sparkled with gratitude, with one saying, "This is a blessing for us. We're thankful to Achyuta Welfare Foundation for thinking of us."
+                        
+                        A shining example of Bhopal's spirit of kindness and generosity.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
 
-    <div class="event-layout">
-      <h2> Cloth Distribution drive -1, Bhopal</h2>
-      <div class="event-slideshow-container" data-auto-slide>
-          <img src="img/Photos/CD1.jpg" alt="Event 2 Slide 1" class="active">
-          <img src="img/Photos/CD2.jpg" alt="Event 2 Slide 2">
-          <img src="img/Photos/CD3.jpg" alt="Event 2 Slide 3">
-      </div>
-      <div class="event-description">
-          <p>WARMTH OF KINDNESS SPREADS IN BHOPAL
-
-
-
-            Bhopal, Dec 1, 2024: On a chilly winter morning, Team Bhopal of Achyuta Welfare Foundation brought warmth and smiles to the underprivileged at Chetak Bridge.
-            
-            
-            
-            The foundation's cloth distribution drive was a beacon of hope, reminding us that small gestures can make a big difference. Beneficiaries' eyes sparkled with gratitude, with one saying, "This is a blessing for us. We're thankful to Achyuta Welfare Foundation for thinking of us."
-            
-            
-            
-            A shining example of Bhopal's spirit of kindness and generosity.</p>
-      </div>
-    </div>
-
-    <div class="event-layout">
-      <h2>Cloth Distribution drive -2, Bhopal</h2>
-      <div class="event-slideshow-container" data-auto-slide>
-          <img src="img/Photos/CB1.jpg" alt="Event 2 Slide 1" class="active">
-          <img src="img/Photos/CB2.jpg" alt="Event 2 Slide 2">
-          <img src="img/Photos/CB3.jpg" alt="Event 2 Slide 3">
-      </div>
-      <div class="event-description">
-          <p>The Achyuta Welfare Foundation recently organized a cloth distribution drive in Kalpana Nagar, BHEL Bhopal. The foundation distributed new and usable clothing items to underprivileged families, aiming to provide warmth and comfort during the winter season.
-
-            The event was well-received by the local community, with many expressing gratitude to the foundation.</p>
-      </div>
-    </div>
-
-    <div class="event-layout">
-      <h2> Collaboration with KFC</h2>
-      <div class="event-slideshow-container" data-auto-slide>
-          <img src="img/Photos/K1.jpg" alt="Event 2 Slide 1" class="active">
-          <img src="img/Photos/K2.jpg" alt="Event 2 Slide 2">
-          <img src="img/Photos/K3.jpg" alt="Event 2 Slide 3">
-          <img src="img/Photos/K4.jpg" alt="Event 2 Slide 4">
-      </div>
-      <div class="event-description">
-          <p>KFC RAJPUR DEHRADUN GETS A HEARTWARMING INAUGURATION
-
-
-
-            Dehradun: In a unique gesture, KFC Rajpur Dehradun and Achyuta Welfare Foundation joined hands to have 12 slum children inaugurate the new outlet.
-            
-            The children received a warm welcome, veg burgers, fries, gifts, and enjoyed creative activities. This innovative inauguration marked a new culinary journey while highlighting the importance of giving back to the community.
-            
-            
-            
-            Kudos to KFC Rajpur Dehradun and Achyuta Welfare Foundation for spreading joy and warmth!</p>
-      </div>
-    </div>
-         
-    </div>
+        <div id="events">
+            <!-- Event 7 -->
+            <div class="event-layout">
+                <h2>Cloth Distribution drive -2, Bhopal</h2>
+                <div class="event-slideshow-container" data-auto-slide>
+                    <img src="img/Photos/CB1.jpg" alt="Event 7 Slide 1" class="event-slide active">
+                    <img src="img/Photos/CB2.jpg" alt="Event 7 Slide 2" class="event-slide">
+                    <img src="img/Photos/CB3.jpg" alt="Event 7 Slide 3" class="event-slide">
+                
+                    <!-- Navigation Buttons -->
+                    <button class="prev-btn" onclick="changeSlide(-1, 6)">❮</button>
+                    <button class="next-btn" onclick="changeSlide(1, 6)">❯</button>
+                </div>
+                <div class="event-description">
+                    <p>
+                        The Achyuta Welfare Foundation recently organized a cloth distribution drive in Kalpana Nagar, BHEL Bhopal. The foundation distributed new and usable clothing items to underprivileged families, aiming to provide warmth and comfort during the winter season.
+        
+                        The event was well-received by the local community, with many expressing gratitude to the foundation.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="events">
+            <!-- Event 8 -->
+            <div class="event-layout">
+                <h2>Collaboration with KFC</h2>
+                <div class="event-slideshow-container" data-auto-slide>
+                    <img src="img/Photos/K1.jpg" alt="Event 8 Slide 1" class="event-slide active">
+                    <img src="img/Photos/K2.jpg" alt="Event 8 Slide 2" class="event-slide">
+                    <img src="img/Photos/K3.jpg" alt="Event 8 Slide 3" class="event-slide">
+                    <img src="img/Photos/K4.jpg" alt="Event 8 Slide 4" class="event-slide">
+                
+                    <!-- Navigation Buttons -->
+                    <button class="prev-btn" onclick="changeSlide(-1, 7)">❮</button>
+                    <button class="next-btn" onclick="changeSlide(1, 7)">❯</button>
+                </div>
+                <div class="event-description">
+                    <p>
+                        KFC RAJPUR DEHRADUN GETS A HEARTWARMING INAUGURATION
+        
+                        Dehradun: In a unique gesture, KFC Rajpur Dehradun and Achyuta Welfare Foundation joined hands to have 12 slum children inaugurate the new outlet.
+                        
+                        The children received a warm welcome, veg burgers, fries, gifts, and enjoyed creative activities. This innovative inauguration marked a new culinary journey while highlighting the importance of giving back to the community.
+                        
+                        Kudos to KFC Rajpur Dehradun and Achyuta Welfare Foundation for spreading joy and warmth!
+                    </p>
+                </div>
+            </div>
+        </div>
+        
 </div>
 
  <!-- ============FOOTER============= -->
@@ -430,12 +550,12 @@
                     </a>
                 </div>
             </div>
-            <p class="text-center footer-text1">+91-9675859126</p>
+            <p class="text-center footer-text1">+91-9675859126</p><br>
                 <p class="text-center footer-text"> achyutawelfarefoundation@gmail.com </p></div>
         </div>
         <div class="footer-third col-xs-12 col-sm-4 col-md-4">
             <div class="copyright">
-                <span>Copyright 2025 Achyuta Welfare Foundation</span><br>
+                <span>Copyright © 2025 Achyuta Welfare Foundation</span><br>
                 <span>All Rights Reserved</span>
             </div>
         </div>
@@ -459,25 +579,50 @@
         autoControls: true
     });
 </script>
-</body>
-</html>
-
 
 <script>
-    // Auto slide functionality for all slideshows
-    document.querySelectorAll('[data-auto-slide]').forEach(slideshow => {
-        let slides = slideshow.querySelectorAll('img');
-        let currentSlide = 0;
+   // Array to store current slide index for each slideshow
+let slideIndexes = [];
 
-        function showNextSlide() {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }
+// Initialize the first slideshow
+showSlides(0, 0);
+showSlides(0, 1);
+showSlides(0, 2);
+showSlides(0, 3);
+showSlides(0, 4);
+showSlides(0, 5);
+showSlides(0, 6);
+showSlides(0, 7);
 
-        setInterval(showNextSlide, 3000); // Change slide every 3 seconds
-    });
+
+// Function to change slides
+function changeSlide(n, slideshowIndex) {
+    showSlides(slideIndexes[slideshowIndex] += n, slideshowIndex);
+}
+
+// Function to display the correct slide
+function showSlides(n, slideshowIndex) {
+    let slides = document.querySelectorAll(".event-layout")[slideshowIndex].getElementsByClassName("event-slide");
+
+    // Initialize the slideIndexes array for new slideshows
+    if (slideIndexes[slideshowIndex] === undefined) {
+        slideIndexes[slideshowIndex] = 0;
+    }
+
+    if (n >= slides.length) slideIndexes[slideshowIndex] = 0;
+    if (n < 0) slideIndexes[slideshowIndex] = slides.length - 1;
+
+    // Remove 'active' class from all slides
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+
+    // Add 'active' class to the current slide
+    slides[slideIndexes[slideshowIndex]].classList.add("active");
+}
+
 </script>
+
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
